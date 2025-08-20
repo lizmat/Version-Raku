@@ -56,8 +56,8 @@ eqv
 ---
 
 ```raku
-my $left  = Version::Raku.new("1.0foo");
-my $right = Version::Raku.new("1.0f");
+my $left  = Version::Raku.new("1.01");
+my $right = Version::Raku.new("1.1");
 
 say $left.eqv($right);  # True
 ```
