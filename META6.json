@@ -11,6 +11,7 @@
   "license": "Artistic-2.0",
   "name": "Version::Raku",
   "provides": {
+    "Version::Raku": "lib/Version/Raku.rakumod"
   },
   "raku": "6.d",
   "resources": [

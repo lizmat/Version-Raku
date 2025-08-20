@@ -71,8 +71,8 @@ The `eqv` method returns whether the internal state of two `Version::Raku` objec
 my $left  = Version::Raku.new("1.0");
 my $right = Version::Raku.new("1.1");
 
-say $left."=="($left);  # False
-say $left."<"($right);  # True
+say $left."=="($right);  # False
+say $left."<"($right);   # True
 ```
 
 These oddly named methods provide the same functionality as their infix counterparts. Please note that you **must** use the `"xx"()` syntax, because otherwise the Raku compiler will assume you've made a syntax error.

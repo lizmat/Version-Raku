@@ -56,8 +56,8 @@ C<More>.
 =head2 eqv
 
 =begin code :lang<raku>
-my $left  = Version::Raku.new("1.0foo");
-my $right = Version::Raku.new("1.0f");
+my $left  = Version::Raku.new("1.01");
+my $right = Version::Raku.new("1.1");
 
 say $left.eqv($right);  # True
 =end code
@@ -71,8 +71,8 @@ C<Version::Raku> objects are identical.
 my $left  = Version::Raku.new("1.0");
 my $right = Version::Raku.new("1.1");
 
-say $left."=="($left);  # False
-say $left."<"($right);  # True
+say $left."=="($right);  # False
+say $left."<"($right);   # True
 =end code
 
 These oddly named methods provide the same functionality as their
