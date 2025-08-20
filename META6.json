@@ -1,0 +1,31 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Version with comparator methods",
+  "license": "Artistic-2.0",
+  "name": "Version::Raku",
+  "provides": {
+  },
+  "raku": "6.d",
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Version-Raku.git",
+  "support": {
+    "bugtracker": "https://github.com/lizmat/Version-Raku/issues",
+    "email": "liz@raku.rocks",
+    "source": "https://github.com/lizmat/Version-Raku.git"
+  },
+  "tags": [
+    "VERSION",
+    "REPOLOGY"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}
