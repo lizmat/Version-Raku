@@ -13,6 +13,8 @@ BEGIN {
     Version::Raku.^add_method: "<=",  &[<=];   # UNCOVERABLE
     Version::Raku.^add_method: ">",   &[>];    # UNCOVERABLE
     Version::Raku.^add_method: ">=",  &[>=];   # UNCOVERABLE
+
+    Version::Raku.^add_method: "~~", { $^b.ACCEPTS($^a) }  # UNCOVERABLE
 }
 
 # vim: expandtab shiftwidth=4

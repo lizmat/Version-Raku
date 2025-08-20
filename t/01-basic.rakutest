@@ -1,7 +1,7 @@
 use Test;
 use Version::Raku;
 
-plan 18;
+plan 20;
 
 my $v = Version::Raku.new("1.0foo.bar");
 isa-ok $v, Version::Raku;
@@ -14,6 +14,7 @@ is-deeply $v."<="($v),  True, 'can we compare with <=';
 is-deeply $v.">="($v),  True, 'can we compare with >=';
 is-deeply $v.">"($v),  False, 'can we compare with >';
 is-deeply $v."!="($v), False, 'can we compare with !=';
+is-deeply $v."~~"($v),  True, 'can we compare with ~~';
 
 my $z = Version::Raku.new("");
 isa-ok $v, Version::Raku;
@@ -26,5 +27,6 @@ is-deeply $v."<="($z), False, 'can we compare z with <=';
 is-deeply $v.">="($z),  True, 'can we compare z with >=';
 is-deeply $v.">"($z),   True, 'can we compare z with >';
 is-deeply $v."!="($z),  True, 'can we compare z with !=';
+is-deeply $v."~~"($z),  True, 'can we compare z with ~~';
 
 # vim: expandtab shiftwidth=4

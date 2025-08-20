@@ -12,7 +12,6 @@ use Version::Raku;
 my $left  = Version::Raku.new("1.0");
 my $right = Version::Raku.new("1.1");
 
-# method interface
 say $left.cmp($right);  # Less
 say $left."<"($right);  # True
 =end code
@@ -28,8 +27,6 @@ distribution.
 =head1 INSTANTIATION
 
 =begin code :lang<raku>
-use Version::Raku;
-
 my $v = Version::Raku.new("1.0");
 =end code
 
@@ -65,7 +62,7 @@ say $left.eqv($right);  # True
 The C<eqv> method returns whether the internal state of two
 C<Version::Raku> objects are identical.
 
-=head2 == != < <= > >=
+=head2 == != < <= > >= ~~
 
 =begin code :lang<raku>
 my $left  = Version::Raku.new("1.0");

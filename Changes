@@ -1,6 +1,7 @@
 Revision history for Version::Raku
 
 {{$NEXT}}
+    - Add "~~" method
 
 0.0.1  2025-08-20T21:37:32+02:00
     - Initial version

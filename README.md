@@ -14,7 +14,6 @@ use Version::Raku;
 my $left  = Version::Raku.new("1.0");
 my $right = Version::Raku.new("1.1");
 
-# method interface
 say $left.cmp($right);  # Less
 say $left."<"($right);  # True
 ```
@@ -28,8 +27,6 @@ INSTANTIATION
 =============
 
 ```raku
-use Version::Raku;
-
 my $v = Version::Raku.new("1.0");
 ```
 
@@ -64,8 +61,8 @@ say $left.eqv($right);  # True
 
 The `eqv` method returns whether the internal state of two `Version::Raku` objects are identical.
 
-== != < <= > >=
----------------
+== != < <= > >= ~~
+------------------
 
 ```raku
 my $left  = Version::Raku.new("1.0");
