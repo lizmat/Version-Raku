@@ -1,0 +1,39 @@
+use Test;
+use Version::Raku;
+
+plan 12;
+
+my $v = Version::Raku.new("1.2");
+isa-ok $v, Version::Raku;
+
+my $range = ("==", $v).Slip;
+is-deeply $v.as-generic-range, $range, "did '()' expand ok";
+
+for \($v), \($v.Str) {
+    is-deeply Version::Raku.as-generic-range(|$_), $range,
+      "did '$_.raku()' expand ok";
+}
+
+my $vp = Version::Raku.new("1.2+");
+isa-ok $vp, Version::Raku;
+
+my $rangep = (">=", $v).Slip;
+is-deeply $vp.as-generic-range, $rangep, "did '()' expand ok";
+
+for \($vp), \($vp.Str) {
+    is-deeply Version::Raku.as-generic-range(|$_), $rangep,
+      "did '$_.raku()' expand ok";
+}
+
+my $vs = Version::Raku.new("1.2.*");
+isa-ok $vs, Version::Raku;
+
+my $ranges = (">=", $v, "<", Version::Raku.new("1.3")).Slip;
+is-deeply $vs.as-generic-range, $ranges, "did '()' expand ok";
+
+for \($vs), \($vs.Str) {
+    is-deeply Version::Raku.as-generic-range(|$_), $ranges,
+      "did '$_.raku()' expand ok";
+}
+
+# vim: expandtab shiftwidth=4

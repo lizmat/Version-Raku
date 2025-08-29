@@ -33,6 +33,20 @@ my $v = Version::Raku.new("1.0");
 The basic instantion of a C<Version::Raku> object is done with
 the C<new> method, taking the version string as a positional argument.
 
+=head1 CLASS METHODS
+
+=head2 as-generic-range
+
+=begin code :lang<raku>
+say Version::Raku.as-generic-range(v1.2);     # (== v1.2)
+say Version::Raku.as-generic-range(v1.2+);    # (>= v1.2)
+say Version::Raku.as-generic-range('1.2.*');  # (>= v1.2 < v1.3)
+=end code
+
+Convert a Raku version specification to a generic range specification,
+consisting of a C<Slip> with a string representing a comparator ("==",
+">=", "<") and a C<Version::Raku> object, possibly repeated.
+
 =head1 COMPARATOR METHODS
 
 =head2 cmp
