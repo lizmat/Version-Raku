@@ -1,4 +1,4 @@
-class Version::Raku:ver<0.0.1>:auth<zef:lizmat> is Version {
+class Version::Raku:ver<0.0.2>:auth<zef:lizmat> is Version {
     proto method as-generic-range(|) {*}
     multi method as-generic-range(Version::Raku:D:) {
         self.WHAT.as-generic-range(self)

@@ -1,6 +1,8 @@
 Revision history for Version::Raku
 
 {{$NEXT}}
+
+0.0.2  2025-08-29T20:00:21+02:00
     - Add support for "as-generic-range" method
     - Add "~~" method
 

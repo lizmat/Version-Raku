@@ -32,6 +32,20 @@ my $v = Version::Raku.new("1.0");
 
 The basic instantion of a `Version::Raku` object is done with the `new` method, taking the version string as a positional argument.
 
+CLASS METHODS
+=============
+
+as-generic-range
+----------------
+
+```raku
+say Version::Raku.as-generic-range(v1.2);     # (== v1.2)
+say Version::Raku.as-generic-range(v1.2+);    # (>= v1.2)
+say Version::Raku.as-generic-range('1.2.*');  # (>= v1.2 < v1.3)
+```
+
+Convert a Raku version specification to a generic range specification, consisting of a `Slip` with a string representing a comparator ("==", ">=", "<") and a `Version::Raku` object, possibly repeated.
+
 COMPARATOR METHODS
 ==================
 
