@@ -23,8 +23,7 @@
     "source": "https://github.com/lizmat/Version-Raku.git"
   },
   "tags": [
-    "VERSION",
-    "REPOLOGY"
+    "VERSION"
   ],
   "test-depends": [
   ],
